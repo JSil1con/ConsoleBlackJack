@@ -1,0 +1,14 @@
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.AssemblyInfoInputs.cache
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.AssemblyInfo.cs
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.csproj.CoreCompileInputs.cache
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\bin\Debug\net6.0\ConsoleBlackJack.exe
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\bin\Debug\net6.0\ConsoleBlackJack.deps.json
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\bin\Debug\net6.0\ConsoleBlackJack.runtimeconfig.json
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\bin\Debug\net6.0\ConsoleBlackJack.dll
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\bin\Debug\net6.0\ConsoleBlackJack.pdb
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.dll
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\refint\ConsoleBlackJack.dll
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.pdb
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.genruntimeconfig.cache
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ref\ConsoleBlackJack.dll
