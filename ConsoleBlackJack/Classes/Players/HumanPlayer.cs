@@ -15,5 +15,26 @@ namespace ConsoleBlackJack.Classes.Players
             _name = name;
             _hand = new Hand(cardOne, cardTwo);
         }
+
+        public void CanDrawCard()
+        {
+            if (_hand.CountValues > 21)
+            {
+                return false;
+            }
+            while (true)
+            {
+                Console.WriteLine("Chces si liznout jeste kartu? [A/N]");
+                string answer = Console.ReadLine();
+                if (answer.ToLower == "a")
+                {
+                    return true;
+                }
+                else if (answer.ToLower == "n")
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

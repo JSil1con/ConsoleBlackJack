@@ -15,9 +15,13 @@ namespace ConsoleBlackJack.Classes.Players
             _hand = new Hand(cardOne, cardTwo);
         }
 
-        public void DrawCard()
+        public void CanDrawCard()
         {
-
+            if (_hand.CountValues < 17)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
