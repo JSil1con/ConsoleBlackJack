@@ -9,10 +9,12 @@ namespace ConsoleBlackJack.Classes.Cards
     internal class Hand
     {
         private readonly List<Card> _cards = new List<Card>();
+        private int _sumCards;
         public Hand(Card cardOne, Card cardTwo)
         {
             SaveCard(cardOne);
             SaveCard(cardTwo);
+            _sumCards = CountValues();
         }
 
         public void SaveCard(Card card)
@@ -26,6 +28,36 @@ namespace ConsoleBlackJack.Classes.Cards
             {
                 Console.WriteLine(card.GetValue() + card.GetSymbol());
             }
+        }
+
+        public int CountValues()
+        {
+            int sum = 0;
+            int aceCount = 0;
+            foreach (Card card in _cards)
+            {
+                if (card.GetValue() == "J" ||  card.GetValue() == "Q" || card.GetValue() == "K")
+                {
+                    sum += 10;
+                }
+                else if(card.GetValue() == "A")
+                {
+                    sum += 11;
+                    aceCount++;
+                }
+                else
+                {
+                    sum+= Int32.Parse(card.GetValue());
+                }
+
+            }
+
+            while (sum > 21 && aceCount > 0)
+            {
+                sum -= 10;
+                aceCount--;
+            }
+            return sum;
         }
     }
 }

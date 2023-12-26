@@ -12,3 +12,4 @@ D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\refint\ConsoleBl
 D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.pdb
 D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.genruntimeconfig.cache
 D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ref\ConsoleBlackJack.dll
+D:\School\va\ConsoleBlackJack\ConsoleBlackJack\obj\Debug\net6.0\ConsoleBlackJack.sourcelink.json

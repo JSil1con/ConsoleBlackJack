@@ -14,5 +14,10 @@ namespace ConsoleBlackJack.Classes.Players
             _name = name;
             _hand = new Hand(cardOne, cardTwo);
         }
+
+        public void DrawCard()
+        {
+
+        }
     }
 }

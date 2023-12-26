@@ -9,8 +9,8 @@ namespace ConsoleBlackJack.Classes.Cards
     internal class Card
     {
         private readonly string _symbol;
-        private readonly int _value;
-        public Card(string symbol, int value)
+        private readonly string _value;
+        public Card(string symbol, string value)
         {
             _symbol = symbol;
             _value = value;
@@ -21,7 +21,7 @@ namespace ConsoleBlackJack.Classes.Cards
             return _symbol;
         }
 
-        public int GetValue()
+        public string GetValue()
         {
             return _value;
         }
