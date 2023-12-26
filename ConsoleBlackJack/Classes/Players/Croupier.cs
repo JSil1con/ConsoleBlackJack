@@ -15,6 +15,11 @@ namespace ConsoleBlackJack.Classes.Players
             _hand = new Hand(cardOne, cardTwo);
         }
 
+        public void ShowFirstCard()
+        {
+            Console.WriteLine("Prvni karta krupiera je: " + _hand.GetCards()[0].GetCardInfo());
+        }
+
         public bool CanDrawCard()
         {
             if (_hand.CountValues() < 17)

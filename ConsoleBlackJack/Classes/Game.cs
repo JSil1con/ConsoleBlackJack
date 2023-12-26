@@ -15,9 +15,14 @@ namespace ConsoleBlackJack.Classes
         private Deck _deck;
         public Game()
         {
+            Console.OutputEncoding = Encoding.UTF8;
+
             _deck = new Deck();
             _humanPlayer = new HumanPlayer("Hrac", _deck.GetCard(), _deck.GetCard());
             _croupier = new Croupier("Krupier", _deck.GetCard(), _deck.GetCard());
+
+            _croupier.ShowFirstCard();
+
         }
     }
 }

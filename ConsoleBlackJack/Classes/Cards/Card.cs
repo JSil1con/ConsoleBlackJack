@@ -16,6 +16,11 @@ namespace ConsoleBlackJack.Classes.Cards
             _value = value;
         }
 
+        public string GetCardInfo()
+        {
+            return _value + "" + _symbol;
+        }
+
         public string GetSymbol()
         {
             return _symbol;

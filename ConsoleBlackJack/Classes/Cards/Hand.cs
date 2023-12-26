@@ -22,11 +22,16 @@ namespace ConsoleBlackJack.Classes.Cards
             _cards.Add(card);
         }
 
+        public List<Card> GetCards()
+        {
+            return _cards;
+        }
+
         public void ViewAllCards()
         {
             foreach (Card card in _cards)
             {
-                Console.WriteLine(card.GetValue() + card.GetSymbol());
+                Console.WriteLine(card.GetCardInfo());
             }
         }
 
