@@ -11,5 +11,12 @@ namespace ConsoleBlackJack.Classes.Players
     {
         protected string _name;
         protected Hand _hand;
+
+        public abstract bool CanDrawCard();
+
+        public void DrawCard(Card card)
+        {
+            _hand.SaveCard(card);
+        }
     }
 }

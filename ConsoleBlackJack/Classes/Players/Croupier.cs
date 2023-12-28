@@ -20,7 +20,7 @@ namespace ConsoleBlackJack.Classes.Players
             Console.WriteLine("Prvni karta krupiera je: " + _hand.GetCards()[0].GetCardInfo());
         }
 
-        public bool CanDrawCard()
+        public override bool CanDrawCard()
         {
             if (_hand.CountValues() < 17)
             {

@@ -21,7 +21,17 @@ namespace ConsoleBlackJack.Classes
             _humanPlayer = new HumanPlayer("Hrac", _deck.GetCard(), _deck.GetCard());
             _croupier = new Croupier("Krupier", _deck.GetCard(), _deck.GetCard());
 
+            while(_croupier.CanDrawCard())
+            {
+                _croupier.DrawCard(_deck.GetCard());
+            }
+
             _croupier.ShowFirstCard();
+
+            while(_humanPlayer.CanDrawCard())
+            {
+                _humanPlayer.DrawCard(_deck.GetCard());
+            }
 
         }
     }
