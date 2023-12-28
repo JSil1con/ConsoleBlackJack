@@ -12,14 +12,16 @@ namespace ConsoleBlackJack.Classes.Players
     internal class HumanPlayer : Player
     {
         private int _coins;
+        private int _bet;
         public HumanPlayer(string name, Card cardOne, Card cardTwo)
         {
             _name = name;
             _hand = new Hand(cardOne, cardTwo);
             _coins = 5000;
+            _bet = 0;
         }
 
-        public void GetCoins()
+        public void ViewAmmountCoins()
         {
             Console.WriteLine("You have " + _coins + " coins");
         }
@@ -27,10 +29,10 @@ namespace ConsoleBlackJack.Classes.Players
         public int MakeBet()
         {
             Console.WriteLine("How many coins do you want to bet?");
-            int bet = Int32.Parse(Console.ReadLine());
+            _bet = Int32.Parse(Console.ReadLine());
             while (true)
             {
-                if (bet > _coins)
+                if (_bet > _coins)
                 {
                     Console.WriteLine("You don't have this ammount of coins");
                 }
@@ -39,13 +41,23 @@ namespace ConsoleBlackJack.Classes.Players
                     break;
                 }
             }
-            _coins -= bet;
-            return bet;
+            _coins -= _bet;
+            return _bet;
         }
 
-        public void AddCoins(int coinsToAdd)
+        public void IncreaseBet()
         {
-            _coins += coinsToAdd;
+            _bet *= 2;
+        }
+
+        public void AddCoins()
+        {
+            _coins += _bet * 2;
+        }
+
+        public void ReturnBet()
+        {
+            _coins += _bet;
         }
 
         public override bool CanDrawCard()
@@ -56,9 +68,9 @@ namespace ConsoleBlackJack.Classes.Players
             }
             while (true)
             {
-                Console.WriteLine("Chces si liznout jeste kartu? [A/N]");
+                Console.WriteLine("Do you want to draw another card? [Y/N]");
                 string answer = Console.ReadLine();
-                if (answer.ToLower() == "a")
+                if (answer.ToLower() == "y")
                 {
                     return true;
                 }
