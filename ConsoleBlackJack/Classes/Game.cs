@@ -17,12 +17,13 @@ namespace ConsoleBlackJack.Classes
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            _humanPlayer = new HumanPlayer("Hrac", _deck.GetCard(), _deck.GetCard());
-            _croupier = new Croupier("Krupier", _deck.GetCard(), _deck.GetCard());
+            int coins = 5000;
 
             do
             {
-                _deck = new Deck();
+                Deck _deck = new Deck();
+                HumanPlayer _humanPlayer = new HumanPlayer("Player", _deck.GetCard(), _deck.GetCard(), coins);
+                Croupier _croupier = new Croupier("Croupier", _deck.GetCard(), _deck.GetCard());
 
                 _humanPlayer.ViewAmmountCoins();
                 _humanPlayer.MakeBet();
@@ -42,7 +43,9 @@ namespace ConsoleBlackJack.Classes
                     _humanPlayer.ShowCards();
                 }
 
-                GameResult(_croupier.GetHand(), _humanPlayer.GetHand());
+                GameResult(_croupier, _humanPlayer);
+
+                coins = _humanPlayer.GetCoins();
 
                 Console.WriteLine("Do you want to play next game? [Y/N]");
                 string answer = Console.ReadLine();
@@ -50,15 +53,17 @@ namespace ConsoleBlackJack.Classes
                 {
                     break;
                 }
+
+                Console.Clear();
             } while (true);
         }
 
-        private void GameResult(Hand croupierHand, Hand playerHand)
+        private void GameResult(Croupier croupier, HumanPlayer humanPlayer)
         {
-            int playerSum = playerHand.CountValues();
-            int croupierSum = croupierHand.CountValues();
+            int croupierSum = croupier.GetHand().CountValues();
+            int playerSum = humanPlayer.GetHand().CountValues();
 
-            Console.WriteLine("Croupier's cards: " + croupierHand.GetAllCards());
+            Console.WriteLine("Croupier's cards: " + croupier.GetHand().GetAllCards());
 
             if (playerSum > 21)
             {
@@ -67,14 +72,14 @@ namespace ConsoleBlackJack.Classes
             else if (croupierSum > 21 && playerSum <= 21)
             {
                 Console.WriteLine("You won");
-                _humanPlayer.AddCoins();
+                humanPlayer.AddCoins();
             }
             else if (croupierSum <= 21 && playerSum <= 21)
             {
                 if (croupierSum < playerSum)
                 {
                     Console.WriteLine("You won");
-                    _humanPlayer.AddCoins();
+                    humanPlayer.AddCoins();
                 }
                 else if (croupierSum > playerSum)
                 {
@@ -83,7 +88,7 @@ namespace ConsoleBlackJack.Classes
                 else
                 {
                     Console.WriteLine("It's draw");
-                    _humanPlayer.ReturnBet();
+                    humanPlayer.ReturnBet();
                 }
             }
         }

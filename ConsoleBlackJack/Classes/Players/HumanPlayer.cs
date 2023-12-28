@@ -13,11 +13,11 @@ namespace ConsoleBlackJack.Classes.Players
     {
         private int _coins;
         private int _bet;
-        public HumanPlayer(string name, Card cardOne, Card cardTwo)
+        public HumanPlayer(string name, Card cardOne, Card cardTwo, int coins)
         {
             _name = name;
             _hand = new Hand(cardOne, cardTwo);
-            _coins = 5000;
+            _coins = coins;
             _bet = 0;
         }
 
@@ -43,6 +43,11 @@ namespace ConsoleBlackJack.Classes.Players
             }
             _coins -= _bet;
             return _bet;
+        }
+
+        public int GetCoins()
+        {
+            return _coins;
         }
 
         public void IncreaseBet()
