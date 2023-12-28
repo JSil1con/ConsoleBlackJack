@@ -18,5 +18,7 @@ namespace ConsoleBlackJack.Classes.Players
         {
             _hand.SaveCard(card);
         }
+
+        public Hand GetHand() { return _hand; }
     }
 }

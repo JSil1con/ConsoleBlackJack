@@ -28,6 +28,9 @@ namespace ConsoleBlackJack.Classes
 
             _croupier.ShowFirstCard();
 
+            Console.Write("Tvoje karty: ");
+            _humanPlayer.GetHand().ViewAllCards();
+
             while(_humanPlayer.CanDrawCard())
             {
                 _humanPlayer.DrawCard(_deck.GetCard());

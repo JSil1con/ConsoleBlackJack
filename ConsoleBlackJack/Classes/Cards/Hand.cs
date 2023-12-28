@@ -31,8 +31,9 @@ namespace ConsoleBlackJack.Classes.Cards
         {
             foreach (Card card in _cards)
             {
-                Console.WriteLine(card.GetCardInfo());
+                Console.Write(card.GetCardInfo() + " ");
             }
+            Console.WriteLine("");
         }
 
         public int CountValues()
