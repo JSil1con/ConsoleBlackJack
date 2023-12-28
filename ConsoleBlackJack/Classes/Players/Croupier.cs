@@ -17,7 +17,7 @@ namespace ConsoleBlackJack.Classes.Players
 
         public void ShowFirstCard()
         {
-            Console.WriteLine("Prvni karta krupiera je: " + _hand.GetCards()[0].GetCardInfo());
+            Console.WriteLine("The first croupier's card is: " + _hand.GetCards()[0].GetCardInfo());
         }
 
         public override bool CanDrawCard()
