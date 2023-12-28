@@ -28,10 +28,10 @@ namespace ConsoleBlackJack.Classes.Players
 
         public int MakeBet()
         {
-            Console.WriteLine("How many coins do you want to bet?");
-            _bet = Int32.Parse(Console.ReadLine());
             while (true)
             {
+                Console.WriteLine("How many coins do you want to bet?");
+                _bet = Int32.Parse(Console.ReadLine());
                 if (_bet > _coins)
                 {
                     Console.WriteLine("You don't have this ammount of coins");
