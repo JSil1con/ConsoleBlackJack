@@ -5,6 +5,6 @@
     "\\Classes\\Cards",
     "\\Classes\\Players"
   ],
-  "SelectedNode": "\\Classes\\Game.cs",
+  "SelectedNode": "\\Classes\\Cards\\Deck.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -27,13 +27,14 @@ namespace ConsoleBlackJack.Classes.Cards
             return _cards;
         }
 
-        public void ViewAllCards()
+        public string GetAllCards()
         {
+            string result = "";
             foreach (Card card in _cards)
             {
-                Console.Write(card.GetCardInfo() + " ");
+                result += card.GetCardInfo() + " ";
             }
-            Console.WriteLine("");
+            return result;
         }
 
         public int CountValues()

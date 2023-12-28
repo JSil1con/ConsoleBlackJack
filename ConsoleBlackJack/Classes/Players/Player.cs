@@ -19,6 +19,11 @@ namespace ConsoleBlackJack.Classes.Players
             _hand.SaveCard(card);
         }
 
+        public void ShowCards()
+        {
+            Console.WriteLine(_name + "'s cards: " + _hand.GetAllCards());
+        }
+
         public Hand GetHand() { return _hand; }
     }
 }
